@@ -1,4 +1,4 @@
 # Задачи на Python
 
-- Курс: 
+Курс: 
 https://stepik.org/course/58638/syllabus
