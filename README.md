@@ -1,3 +1,5 @@
 # Задачи на Python
 
-Курс https://stepik.org/course/58638/syllabus
+Источники:
+- [ege](ege) - https://inf-ege.sdamgia.ru/
+- [stepik](stepik) - https://stepik.org/course/58638/syllabus
