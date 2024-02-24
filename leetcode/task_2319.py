@@ -15,6 +15,7 @@ class Solution(object):
                         return False
         return True
 
+
 # Пример тестирования решения
 sol = Solution()
 grid = [
@@ -24,4 +25,4 @@ grid = [
     [4, 0, 0, 2]
 ]
 
-sol.checkXMatrix(grid)
+print(sol.checkXMatrix(grid))
