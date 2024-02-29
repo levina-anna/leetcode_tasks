@@ -20,3 +20,9 @@ class Solution(object):
             return -reversed_x
         else:
             return reversed_x
+
+
+n = 2147483647
+print(n)
+n += 1
+print(n)
