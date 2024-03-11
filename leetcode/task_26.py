@@ -14,3 +14,10 @@ class Solution(object):
 
         # Возвращаем количество уникальных элементов
         return insert_pos
+
+
+solution = Solution()
+
+sorted_array_with_duplicates = [1, 1, 2]
+
+print(solution.removeDuplicates(sorted_array_with_duplicates))
