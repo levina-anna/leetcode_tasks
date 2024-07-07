@@ -19,4 +19,4 @@ class Solution(object):
 
 
 sol = Solution()
-print(sol.is_valid("()"))
+print(sol.isValid("()"))

@@ -5,7 +5,7 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        i = 0  # Initialize a pointer for the current position.
+        i = 0
         for j in range(len(nums)):
             if nums[j] != val:
                 nums[i] = nums[j]

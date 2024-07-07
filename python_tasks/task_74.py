@@ -25,7 +25,6 @@ class Solution:
         return False
 
 
-# Test the solution
 sol = Solution()
 matrix = [
     [1, 3, 5, 7],

@@ -18,7 +18,6 @@ class Solution:
         return digits[::-1]
 
 
-# Example usage
 solution = Solution()
 result = solution.plusOne([9, 9, 9])
 print(result)

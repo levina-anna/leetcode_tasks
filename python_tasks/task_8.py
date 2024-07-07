@@ -24,8 +24,8 @@ class Solution:
         if negative:
             result = -result
 
-        INT_MAX = 2**31 - 1
-        INT_MIN = -2**31
+        INT_MAX = 2 ** 31 - 1
+        INT_MIN = -2 ** 31
         if result < INT_MIN:
             return INT_MIN
         if result > INT_MAX:
@@ -33,7 +33,7 @@ class Solution:
 
         return result
 
-# Example usage
+
 sol = Solution()
 example1 = "42"
 example2 = "   -42"
@@ -41,8 +41,8 @@ example3 = "4193 with words"
 example4 = "words and 987"
 example5 = "-91283472332"
 
-print(sol.myAtoi(example1)) # Expected output: 42
-print(sol.myAtoi(example2)) # Expected output: -42
-print(sol.myAtoi(example3)) # Expected output: 4193
-print(sol.myAtoi(example4)) # Expected output: 0
-print(sol.myAtoi(example5)) # Expected output: -2147483648 (INT_MIN)
+print(sol.myAtoi(example1))
+print(sol.myAtoi(example2))
+print(sol.myAtoi(example3))
+print(sol.myAtoi(example4))
+print(sol.myAtoi(example5))

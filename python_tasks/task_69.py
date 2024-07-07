@@ -10,8 +10,5 @@ class Solution(object):
 
 solution = Solution()
 result = solution.mySqrt(4)
-
 print(result)
 print(int(3.7))
-
-

@@ -1,9 +1,7 @@
-# Папки
 Lib/
 Scripts/
 share/
 
-# Файлы
 pyvenv.cfg
 .idea/
 *.iml
@@ -11,6 +9,4 @@ pyvenv.cfg
 *.pyo
 __pycache__/
 
-
-# Виртуальное окружение
 venv/

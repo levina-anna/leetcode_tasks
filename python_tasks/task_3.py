@@ -17,10 +17,8 @@ class Solution(object):
         return max_length
 
 
-# Create an instance of the Solution class
 solution = Solution()
 
-# Test cases
 test_cases = ["abcabcbb", "bbbbb", "pwwkew", ""]
 results = [solution.lengthOfLongestSubstring(test_case) for test_case in test_cases]
-results
+print(results)

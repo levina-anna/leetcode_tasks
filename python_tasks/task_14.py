@@ -21,8 +21,7 @@ class Solution:
         return ''.join(common_prefix)
 
 
-# Example usage
 solution = Solution()
 example_strs = ["flower", "flow", "flight"]
 longest_common_prefix = solution.longestCommonPrefix(example_strs)
-longest_common_prefix
+print(longest_common_prefix)

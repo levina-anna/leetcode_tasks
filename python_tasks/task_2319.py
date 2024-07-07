@@ -7,16 +7,15 @@ class Solution(object):
         n = len(grid)
         for i in range(n):
             for j in range(n):
-                if i == j or i + j == n - 1:  # На диагоналях
+                if i == j or i + j == n - 1:
                     if grid[i][j] == 0:
                         return False
-                else:  # Вне диагоналей
+                else:
                     if grid[i][j] != 0:
                         return False
         return True
 
 
-# Пример тестирования решения
 sol = Solution()
 grid = [
     [2, 0, 0, 1],
