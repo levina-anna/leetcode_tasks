@@ -1,3 +1,3 @@
-SELECT product_id, product_name, category
+SELECT product_id
 FROM Products
-WHERE recyclable = 'Yes' AND low_fat = 'Yes';
+WHERE recyclable = 'Y' AND low_fats = 'Y';
