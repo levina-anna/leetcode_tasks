@@ -23,7 +23,6 @@ class Solution(object):
             left_distances = dfs(node.left)
             right_distances = dfs(node.right)
 
-            # Обновляем количество пар
             for ld in left_distances:
                 for rd in right_distances:
                     if ld + rd <= distance:
