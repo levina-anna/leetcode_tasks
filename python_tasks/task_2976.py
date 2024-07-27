@@ -8,44 +8,33 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        n = len(source)
-        if n != len(target):
-            return -1
+        n = 26
+        dist = [[float('inf')] * n for _ in range(n)]
 
-        transform_cost = {}
-        for o, c, co in zip(original, changed, cost):
-            if (o, c) in transform_cost:
-                transform_cost[(o, c)] = min(transform_cost[(o, c)], co)
+        for i in range(n):
+            dist[i][i] = 0
+
+        for i in range(len(original)):
+            from_char = ord(original[i]) - ord('a')
+            to_char = ord(changed[i]) - ord('a')
+            dist[from_char][to_char] = min(dist[from_char][to_char], cost[i])
+
+        for k in range(n):
+            for i in range(n):
+                if dist[i][k] != float('inf'):
+                    for j in range(n):
+                        if dist[k][j] != float('inf'):
+                            dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+
+        min_cost = 0
+        for i in range(len(source)):
+            if source[i] == target[i]:
+                continue
+            a = ord(source[i]) - ord('a')
+            b = ord(target[i]) - ord('a')
+            if dist[a][b] == float('inf'):
+                return -1
             else:
-                transform_cost[(o, c)] = co
+                min_cost += dist[a][b]
 
-        dp = [float('inf')] * (n + 1)
-        dp[0] = 0
-
-        for i in range(1, n + 1):
-            s_char = source[i - 1]
-            t_char = target[i - 1]
-            if s_char == t_char:
-                dp[i] = dp[i - 1]
-            else:
-                min_cost = float('inf')
-                if (s_char, t_char) in transform_cost:
-                    min_cost = dp[i - 1] + transform_cost[(s_char, t_char)]
-                for o, c, co in zip(original, changed, cost):
-                    if o == s_char:
-                        if (c, t_char) in transform_cost:
-                            min_cost = min(min_cost, dp[i - 1] + co + transform_cost[(c, t_char)])
-                        if c == t_char:
-                            min_cost = min(min_cost, dp[i - 1] + co)
-                dp[i] = min_cost
-
-        return dp[n] if dp[n] != float('inf') else -1
-
-
-sol = Solution()
-source = "abc"
-target = "bcd"
-original = ["a", "b", "c"]
-changed = ["b", "c", "d"]
-cost = [1, 2, 3]
-print(sol.minimumCost(source, target, original, changed, cost))
+        return min_cost
