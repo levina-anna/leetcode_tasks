@@ -7,16 +7,13 @@ class Solution(object):
         :type right: int
         :rtype: int
         """
-        import heapq
-
-        subarray_sums = []
-        for i in range(n):
-            current_sum = 0
+        arr = []
+        i = 0
+        while i < n:
+            prefix = 0
             for j in range(i, n):
-                current_sum += nums[j]
-                subarray_sums.append(current_sum)
-
-        subarray_sums.sort()
-        result = sum(subarray_sums[left - 1:right])
-
-        return result
+                prefix += nums[j]
+                arr.append(prefix)
+            i += 1
+        arr.sort()
+        return sum(arr[left - 1:right]) % 1000000007
